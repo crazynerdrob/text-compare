@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextDiff - Premium Text Comparison</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Diff Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.1.0/diff.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">Text<span>Diff</span></div>
+            <div class="header-controls">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="comparison-workspace">
+            <div class="input-section">
+                <div class="input-group">
+                    <div class="input-header">
+                        <span class="label">Original Text</span>
+                        <div class="actions">
+                            <button class="action-btn small" id="clear-original">Clear</button>
+                            <button class="action-btn small" id="paste-original">Paste</button>
+                        </div>
+                    </div>
+                    <textarea id="original-text" placeholder="Paste original text here..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-header">
+                        <span class="label">Modified Text</span>
+                        <div class="actions">
+                            <button class="action-btn small" id="clear-modified">Clear</button>
+                            <button class="action-btn small" id="paste-modified">Paste</button>
+                        </div>
+                    </div>
+                    <textarea id="modified-text" placeholder="Paste modified text here..."></textarea>
+                </div>
+            </div>
+
+            <div class="controls-bar">
+                <div class="view-toggles">
+                    <button class="toggle-btn active" data-view="split">Split View</button>
+                    <button class="toggle-btn" data-view="unified">Unified View</button>
+                </div>
+                <button id="compare-btn" class="primary-btn">Compare Texts</button>
+            </div>
+
+            <div id="diff-output" class="diff-container hidden">
+                <!-- Diff results will be injected here -->
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Powered by jsdiff</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
