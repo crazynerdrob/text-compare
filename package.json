@@ -1,0 +1,14 @@
+{
+    "name": "text-compare",
+    "version": "1.0.0",
+    "description": "A premium text comparison tool",
+    "scripts": {
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "prettier": "^3.2.4"
+    }
+}

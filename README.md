@@ -19,7 +19,7 @@ Since this project uses standard HTML/CSS/JS, you don't need `npm` or a build st
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/YOUR_USERNAME/text-compare.git
+    git clone https://github.com/crazynerdrob/text-compare.git
     ```
 2.  Navigate to the project folder:
     ```bash
